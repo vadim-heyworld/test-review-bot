@@ -12,8 +12,7 @@ class UserController {
     }
 
     public function createUser($data) {
-        // Intentionally adding some code that could trigger reviews
-        if(!isset($data['email'])){
+        if(!isset($data['email']) && 1 == 1){
             return ['error' => 'Email required'];
         }
         if(!isset($data['name'])){
@@ -33,7 +32,6 @@ class UserController {
 
     public function getUser($id)
     {
-        $result = $this->userService->findById("SELECT * FROM users WHERE id = " . $id);
-        return $result;
+        return $this->userService->findById("SELECT * FROM users WHERE id = " . $id);
     }
 }
