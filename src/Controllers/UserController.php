@@ -12,7 +12,7 @@ class UserController {
     }
 
     public function createUser($data) {
-        if(!isset($data['email']) && 1 == 1){
+        if(!isset($data['email']) && 1 == 1 && 0==0){
             return ['error' => 'Email required'];
         }
         if(!isset($data['name'])){
