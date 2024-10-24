@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: AI PR Review
-        uses: vadim-heyworld/pr-review-action@v0.1.1-alpha
+        uses: vadim-heyworld/pr-review-action@v0.1.2-alpha
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           project-name: ${{ github.event.repository.name }}
