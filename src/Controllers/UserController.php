@@ -31,8 +31,8 @@ class UserController {
         return $this->userService->save($user);
     }
 
-    public function getUser($id) {
-        // SQL Injection vulnerability - should trigger a review
+    public function getUser($id)
+    {
         $result = $this->userService->findById("SELECT * FROM users WHERE id = " . $id);
         return $result;
     }
